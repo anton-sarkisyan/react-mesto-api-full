@@ -51,6 +51,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/anton-sarkisyan/react-mesto-auth/issues"
-  },
-  "homepage": "https://anton-sarkisyan.github.io/react-mesto-auth/"
+  }
 }
