@@ -1,16 +1,17 @@
 const cors = require('cors');
 
-const whiteList = [
-  'http://mesto.anton-sarkisyan.nomoredomains.club',
-  'https://mesto.anton-sarkisyan.nomoredomains.club'
+const whitelist = [
+  'http://localhost:3001',
+'http://mesto.anton-sarkisyan.nomoredomains.club',
+'http://api.mesto.anton-sarkisyan.nomoredomains.club'
 ]
 
 const corsOptions = {
-  origin(origin, callback) {
-    if(whiteList.indexOf(origin) !== -1 || !origin) {
-      callback(null, true)
+  origin: (origin, callback) => {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
     } else {
-      callback(new Error('Not allowed by Cors'));
+      callback(new Error('Not allowed by CORS'));
     }
   },
   methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
