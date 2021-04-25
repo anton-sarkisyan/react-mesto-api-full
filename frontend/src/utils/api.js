@@ -89,7 +89,7 @@ class Api {
 }
 
 const api = new Api({
-  address: 'http://mesto.anton-sarkisyan.nomoredomains.club',
+  address: 'http://api.mesto.anton-sarkisyan.nomoredomains.club',
 })
 
 export default api;
