@@ -5,6 +5,7 @@ const NotFoundErr = require('../errors/not-found-err');
 const ValidationErr = require('../errors/validation-err');
 const NoRightsErr = require('../errors/no-rights-err');
 const ConflictErr = require('../errors/conflict-err');
+
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 const getAllUsers = (req, res, next) => {
@@ -139,9 +140,9 @@ const getCurrentUser = (req, res, next) => {
 
 const handleLogOut = (req, res, next) => {
   User.findOne({ _id: req.user._id })
-  .then(() => res.clearCookie('jwt').send({}))
-  .catch(next);
-}
+    .then(() => res.clearCookie('jwt').send({}))
+    .catch(next);
+};
 
 module.exports = {
   getAllUsers,
@@ -151,5 +152,5 @@ module.exports = {
   updateAvatar,
   getCurrentUser,
   login,
-  handleLogOut
+  handleLogOut,
 };

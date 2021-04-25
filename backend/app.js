@@ -1,18 +1,17 @@
 const express = require('express');
 require('dotenv').config();
-const corsMiddleware = require('./middlewares/cors')
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const { celebrate, errors } = require('celebrate');
+const corsMiddleware = require('./middlewares/cors');
 const { login, creatUser } = require('./controllers/users');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const auth = require('./middlewares/auth');
 const { objValidateAuth } = require('./middlewares/validation');
 const NotFoundError = require('./errors/not-found-err');
-
 
 const { PORT = 3000 } = process.env;
 const app = express();
