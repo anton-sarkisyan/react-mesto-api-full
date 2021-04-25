@@ -89,7 +89,7 @@ class Api {
 }
 
 const api = new Api({
-  address: 'http://localhost:3000',
+  address: 'http://mesto.anton-sarkisyan.nomoredomains.club',
 })
 
 export default api;

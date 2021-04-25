@@ -1,4 +1,4 @@
-const address = 'http://localhost:3000';
+const address = 'http://mesto.anton-sarkisyan.nomoredomains.club';
 
 const responseCheck = (response) => response.ok ? response.json() : Promise.reject(`Ошибка ${response.status}`);
 
