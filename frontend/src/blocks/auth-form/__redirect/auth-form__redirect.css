@@ -1,0 +1,12 @@
+.auth-form__redirect {
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .auth-form__redirect {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

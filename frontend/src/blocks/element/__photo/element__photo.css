@@ -1,0 +1,14 @@
+.element__photo {
+  display: block;
+  width: 100%;
+  max-width: 282px;
+  height: 282px;
+  object-fit: cover;
+  object-position: center top;
+  cursor: pointer;
+  transition: opacity .6s linear;
+}
+
+.element__photo:hover {
+  opacity: .7;
+}

@@ -1,0 +1,5 @@
+.popup__items_type_info-tool-tip {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}

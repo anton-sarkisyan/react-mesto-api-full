@@ -1,0 +1,8 @@
+.auth-form__link {
+  text-decoration: none;
+  transition: opacity .5s ease-in-out;
+}
+
+.auth-form__link:hover {
+  opacity: .5;
+}

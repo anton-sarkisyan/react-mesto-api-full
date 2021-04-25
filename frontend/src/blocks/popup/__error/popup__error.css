@@ -1,0 +1,13 @@
+.popup__error {
+  color: #FF0000;
+  font-size: 12px;
+  line-height: 15px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__items_type_add-card .popup__error {
+    margin-bottom: 20px;
+  }
+}

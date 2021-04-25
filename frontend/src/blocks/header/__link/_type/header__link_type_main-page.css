@@ -1,0 +1,13 @@
+.header__link_type_main-page {
+  color: #A9A9A9;
+}
+
+@media screen and (max-width: 768px) {
+  .header__link_type_main-page {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}

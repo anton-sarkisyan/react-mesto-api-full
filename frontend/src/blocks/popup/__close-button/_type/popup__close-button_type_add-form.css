@@ -1,0 +1,6 @@
+@media screen and (max-width: 768px) {
+  .popup__close-button_type_add-form {
+   top: -27px;
+   right: -27px;
+  }
+}

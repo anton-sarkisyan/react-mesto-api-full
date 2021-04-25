@@ -1,0 +1,5 @@
+@media screen and (max-width: 768px) {
+  .popup__item_type_add-card  {
+    width: calc(100% - 20px * 2);
+  }
+}

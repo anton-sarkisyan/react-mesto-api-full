@@ -1,0 +1,8 @@
+.popup__items_type_open-photo {
+  background-color: transparent;
+  border-radius: none;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}

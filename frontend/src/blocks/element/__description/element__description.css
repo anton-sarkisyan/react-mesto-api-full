@@ -1,0 +1,7 @@
+.element__description {
+  background-color:#fff;
+  max-width: 282px;
+  display: grid;
+  grid-template-columns: .8fr .2fr;
+  padding: 25px 15px 31px 21px;
+}

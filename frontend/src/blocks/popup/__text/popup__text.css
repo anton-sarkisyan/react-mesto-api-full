@@ -1,0 +1,15 @@
+.popup__text {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  width: 100%;
+  padding: 0 0 13px 0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.popup__text::-webkit-input-placeholder {color: #C4C4C4;}
+.popup__text::-moz-placeholder          {color: #C4C4C4;}
+.popup__text::-ms-input-placeholder     {color: #C4C4C4;}
+.popup__text::placeholder               {color: #C4C4C4;}
