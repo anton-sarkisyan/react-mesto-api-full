@@ -1,4 +1,4 @@
-const address = 'http://api.mesto.anton-sarkisyan.nomoredomains.club';
+const address = 'https://api.mesto.anton-sarkisyan.nomoredomains.club';
 
 const responseCheck = (response) => response.ok ? response.json() : Promise.reject(`Ошибка ${response.status}`);
 
