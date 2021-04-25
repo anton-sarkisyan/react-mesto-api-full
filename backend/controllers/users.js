@@ -121,7 +121,7 @@ const login = (req, res, next) => {
               secure: true
             })
             .status(200)
-            .send({ token });
+            .send({ message: 'успешная авторизация' });
         });
     })
     .catch((err) => {

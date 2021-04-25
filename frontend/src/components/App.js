@@ -151,7 +151,7 @@ function App() {
   function handleSignIn({ password, email }) {
     return signIn({ password, email })
       .then(res => {
-        if (res.token) {
+        if (res) {
           setUserEmail(email);
           setLoggedIn(true);
         }
