@@ -2,24 +2,20 @@ const express = require('express');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const helmet = require('helmet');
-const rateLimit = require('express-rate-limit');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const { celebrate, errors } = require('celebrate');
 const corsMiddleware = require('./middlewares/cors');
+const limiter = require('./middlewares/limiter');
 const { login, creatUser } = require('./controllers/users');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const handleErros = require('./middlewares/errors');
 const auth = require('./middlewares/auth');
 const { objValidateAuth } = require('./middlewares/validation');
 const NotFoundError = require('./errors/not-found-err');
 
 const { PORT = 3000 } = process.env;
 const app = express();
-
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
-});
 
 mongoose.connect('mongodb://localhost:27017/mestodb', {
   useNewUrlParser: true,
@@ -29,17 +25,17 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
 });
 
 app.use(helmet());
-app.use(limiter);
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(requestLogger);
 
+app.use(requestLogger);
+app.use(limiter);
 app.use(corsMiddleware);
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
-}); 
+});
 app.post('/signin', celebrate(objValidateAuth), login);
 app.post('/signup', celebrate(objValidateAuth), creatUser);
 
@@ -53,15 +49,8 @@ app.get('*', (req, res, next) => {
 });
 
 app.use(errorLogger);
-
 app.use(errors());
-
-app.use((err, req, res, next) => {
-  const { statusCode = 500, message } = err;
-
-  res.status(statusCode).send({ message: statusCode === 500 ? 'На сервере произошла ошибка' : message });
-  next();
-});
+app.use(handleErros);
 
 app.listen(PORT, () => {
   console.log('Сервер работает');

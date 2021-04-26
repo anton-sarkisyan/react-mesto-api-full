@@ -2,9 +2,9 @@ const cors = require('cors');
 
 const whitelist = [
   'http://localhost:3001',
-'http://mesto.anton-sarkisyan.nomoredomains.club',
-'https://mesto.anton-sarkisyan.nomoredomains.club'
-]
+  'http://mesto.anton-sarkisyan.nomoredomains.club',
+  'https://mesto.anton-sarkisyan.nomoredomains.club',
+];
 
 const corsOptions = {
   origin: (origin, callback) => {
