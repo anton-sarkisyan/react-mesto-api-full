@@ -2,7 +2,7 @@
 
 ## **Описание:**
 
-Сервер для проекта Место. 
+Сервер для проекта [Место](https://github.com/anton-sarkisyan/react-mesto-api-full/tree/main/frontend). 
 
 ## **Функциональность**
 
@@ -33,7 +33,7 @@ collections - users, cards
 `npm run start` — запускает сервер   
 `npm run dev` — запускает сервер с hot-reload
 ```
-6. Для тестирования сервера можно воспользоваться бесплатной программой [Postman](https://www.postman.com/) или запустить фронт часть проекта [Место](https://github.com/anton-sarkisyan/react-mesto-api-full/tree/main/frontend)
+6. Для тестирования сервера можно воспользоваться бесплатной программой [Postman](https://www.postman.com/) или запустить фронт часть проекта [Место](https://github.com/anton-sarkisyan/react-mesto-api-full/tree/main/frontend).
 
 ## **Технологии**
 
